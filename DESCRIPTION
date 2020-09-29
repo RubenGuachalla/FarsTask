@@ -1,0 +1,22 @@
+Package: FarsTask
+Type: Package
+Title: Coursera Week 4 Task - FARS Data Visualization Package
+Version: 0.1.0
+Author: Ruben Guachalla Condorena
+Maintainer: The package maintainer <ruben.guachalla.c@gmail.com>
+Description: Import, summarize and generate accident maps for the years 2013 to 2015 based on data from the Fatal Analysis Reporting System (FARS)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    magrittr,
+    maps,
+    readr,
+    tidyr,
+    rlang,
+    testthat
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

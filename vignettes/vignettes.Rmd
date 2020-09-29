@@ -1,0 +1,49 @@
+---
+title: "FarsTask, an R package to visualize US FARS (Fatality Analysis Recording System) data"
+author: "Ruben Guachalla Condorena"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FarsVignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# US FARS (Fatality Analysis Recording System)
+
+This packages aims to produce simples graphics to show the accidents in US territory.
+
+## The `make_filename` function
+
+This helper function allows the user to create accident data files by year. bz2 files are compressed files, usually on UNIX, for machines that don't support the tar/tarball format
+
+## The `fars_read` function
+The `fars_read` function accepts a csv file and returns a tbl of the data.
+
+## The `fars_read_years` function
+
+this function accepts as input one or more years as an object of type list, calls the function make_filename () and uses those years. (`make_filename` and `fars_read`) to generate a list.
+
+## The `fars_summarize_years` function
+
+It takes a list of years and passes it to fars_read_years (), receives data from the month and year variable and uses the dplyr environment to count the respective count per month for a year.
+
+## The `fars_map_state` function
+
+Plot a Graphic of each State of US.
+
+# Dependencies
+
+* dplyr
+* magrittr
+* tidyr
+* rlang
+* graphics
+* maps
